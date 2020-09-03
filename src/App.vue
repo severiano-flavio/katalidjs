@@ -1,6 +1,6 @@
 <template>
-  <div class="corpo">
-    <router-view/>
+  <div class="corpo" v-cloak>
+    <router-view></router-view>
   </div>
 </template>
 
