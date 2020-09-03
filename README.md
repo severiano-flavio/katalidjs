@@ -14,4 +14,4 @@ Vuecli instalado. Digite ``` npm install -g @vue/cli ```  no terminal para adqui
 
 3. Digite no terminal ``` npm install``` ;
 
-4. Para rodar o servidor, digite 'npm run serve';
+4. Para rodar o servidor, digite ``` npm run serve``` ;
