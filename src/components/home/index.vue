@@ -3,15 +3,15 @@
 <div id="app">
   <v-app>
     
-    <Navbar> </Navbar>
-    <navbarAbas></navbarAbas>
+    <Navbar />
+    <navbarAbas />
 
     <v-main>
       
-      <Banner></Banner>
-      <Servicos></Servicos>
-      <sobreNos></sobreNos>
-      <PorqueNos></PorqueNos>
+      <Banner />
+      <Servicos />
+      <sobreNos v-show="showSobre" />
+      <PorqueNos v-show="showPorque" />
 
     </v-main>
 
@@ -42,6 +42,9 @@ export default {
   },
   data() {
     return {
+      showServ: false,
+      showSobre: false,
+      showPorque: false
     }
   },
   methods: {
@@ -57,7 +60,29 @@ export default {
       if (w <= 760) {
         this.$router.push({name: 'mobile'});
       }
+      },
+    funcServ: function() {
+      let x = window.scrollY;
+      if ( x > 1 ) {
+        this.showServ = true;
+        return;
       }
+    },
+    funcSobre: function() {
+      let x = window.scrollY;
+      if ( x > 500 ) {
+        this.showSobre = true;
+        return;
+      }
+    },
+    funcPorque: function() {
+      let x = window.scrollY;
+      if ( x > 950 ) {
+        this.showPorque = true;
+        return;
+      }
+    }
+
   },
   created() {
     if ( this.isMobile() ) {
@@ -65,9 +90,15 @@ export default {
     }
 
     window.addEventListener('resize', this.responsividade);
+    window.addEventListener('scroll', this.funcServ);
+    window.addEventListener('scroll', this.funcSobre);
+    window.addEventListener('scroll', this.funcPorque);
   },
   destroyed() {
     window.removeEventListener('resize', this.responsividade);
+    window.removeEventListener('scroll', this.funcServ);
+    window.removeEventListener('scroll', this.funcSobre);
+    window.removeEventListener('scroll', this.funcPorque);
   }
 };
 

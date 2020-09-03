@@ -8,9 +8,8 @@
         <v-row
         justify="center">  
         <v-col class="text-center mb-16" cols="12">
-            <a name="servicos" class="text-decoration-none">
+            <a name="servicos" class="text-decoration-none" />
             <h1>{{titulo}}</h1>
-            </a>
         </v-col>
         <v-col cols="2" v-for="(servico, index) of cardServicos" :key="index">
             <v-card flat min-height="50"> 
