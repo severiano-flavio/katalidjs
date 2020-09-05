@@ -6,7 +6,7 @@ Projeto em desenvolvimento de reestruturação do site do Katalid em Vuejs.
 
  Node e Vue/cli instalado.
  
- Digite ``` npm install -g @vue/cli ```  no terminal para adquirir; 
+ Com o Node instalado. Digite ``` npm install -g @vue/cli ```  no terminal para adquirir o Vue/cli; 
 
 ### Instalação
 
