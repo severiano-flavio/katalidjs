@@ -1,6 +1,6 @@
 # katalidjs
 
-Projeto de reestruturação do site do Katalid em Vuejs.
+Projeto em desenvolvimento de reestruturação do site do Katalid em Vuejs.
 
 ### Requisitos
 
