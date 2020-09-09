@@ -1,17 +1,17 @@
 <template>
-    <v-main 
-    fluid>
-    <v-parallax src='@/../static/katalid-background.jpg' height="670" class="mt-n6">
-        <v-row
-        align="center"
-        justify="center">
-            <v-col class="text-center" cols="12">
-                <h1 v-text="titulo" />
-                <h4 v-text="subtitulo" />
-            </v-col>
+        <v-parallax src='@/../static/katalid-background.jpg' class="mt-n6">
+            <v-row
+            align="center"
+            justify="center">
+                <v-col 
+                class="text-center"
+                cols="12">
+                    <h1 v-text="titulo" />
+                    <h4 v-text="subtitulo" />
+                </v-col>
         </v-row>
-    </v-parallax>
-    </v-main>
+        </v-parallax>
+
 </template>
 
 <script>

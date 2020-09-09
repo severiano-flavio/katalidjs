@@ -1,23 +1,25 @@
 <template>
 
-<div id="app">
   <v-app>
     
     <Navbar />
     <navbarAbas />
 
-    <v-main>
-      
+  <v-main >
+    <v-container pa-0 fluid>
       <Banner />
-      <Servicos />
-      <sobreNos v-show="showSobre" />
-      <PorqueNos v-show="showPorque" />
+    <Servicos />
+    <sobreNos v-show="showSobre" />
+    <PorqueNos v-show="showPorque" />
+    </v-container>
+    
+  </v-main>
 
-    </v-main>
 
   </v-app>
 
-</div>
+
+
 
 </template>
 
@@ -42,9 +44,9 @@ export default {
   },
   data() {
     return {
-      showServ: false,
-      showSobre: false,
-      showPorque: false
+      showServ: true,
+      showSobre: true,
+      showPorque: true
     }
   },
   methods: {
