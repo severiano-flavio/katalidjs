@@ -1,9 +1,5 @@
 <template>
   <v-container fluid>
-    <v-navigation-drawer app class="hidden-md-and-up" v-model="visibilidade" right>
-        <!-- Mobile menu -->
-    </v-navigation-drawer>
-
     <v-toolbar absolute flat width="95vw" color="transparent" transition="fade-transition" class="mb-n8">
       <div class="d-flex align-center">
         <v-img
@@ -38,7 +34,6 @@ export default {
     props: ['Navbar'],
     data() {
       return {
-        visibilidade: false,
          menus: [
         {
           titulo: 'Serviços',

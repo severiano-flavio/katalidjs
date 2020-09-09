@@ -1,93 +1,48 @@
 <template>
     <div style="z-index: 1;">
         <transition name="sliderNav">
-            <v-btn
-            fixed
-            color="red white--text"
+            <botao
+            color="red"
             v-show="abas.abaHome"
-            @click="scrollHome()"
+            click="home"
             style="left:50px; top: -5px;"
-            >Home</v-btn>
+            rotulo="Home"
+            />
         </transition>
         <transition name="sliderNav">
-            <v-btn
-            fixed
-            color="blue white--text"
-            @click="scrollServicos()"
+            <botao
+            color="blue"
             v-show="abas.abaServicos"
-            style="left:135px; top: -5px;">Serviços</v-btn>
-        </transition>    
-        <v-dialog max-width="600px">
-            <template v-slot:activator="{ on, attrs }">
+            click="servicos"
+            style="left:135px; top: -5px;"
+            rotulo="Serviços"
+            />
+        </transition>
 
-                <v-btn
-                fixed
-                color="blue white--text"
-                style="right:10px; bottom: -5px;"
-                v-bind="attrs"
-                v-on="on">Contato</v-btn>
+        <Form /> <!-- modal do formulário de contato -->
 
-            </template>
-            <v-card>
-                <v-main style=" background-color:#02183f">
-                    <v-row align="center" justify="center">
-                        <v-col cols="8">
-                            <v-form>
-                                <v-text-field
-                                outlined
-                                dark
-                                color="purple lighten-1"
-                                class="corInput"
-                                v-for="(nome, index) of form"
-                                :key="index"
-                                :label="nome.inputNome"></v-text-field>
-                                <v-textarea
-                                outlined
-                                dark
-                                color="purple lighten-1"
-                                class="corInput"
-                                label="Mensagem"></v-textarea>
-                                <v-row align="center" justify="center">
-                                    <v-col cols="8" align="center">
-                                        <v-btn class="ml-5 success" width="5vw">Enviar</v-btn>
-                                        <v-btn class="ml-5" width="5vw">Limpar</v-btn>
-                                    </v-col>
-                                    
-                                </v-row>
-                            </v-form>
-                        </v-col>
-                    </v-row>
-                </v-main>
-            </v-card>
-      </v-dialog>
     </div>
 </template>
 
 <script>
 
-import Contato from "./../contato/contato"
+import Contato from "./../contato/contato";
+import Botao from "./../../shared/botoes";
+import Form from "./../../shared/formulario";
 
 export default {
+    components: {
+        Botao,
+        Form
+    },
    data() {
     return {
         Contato,
         abas: {
             abaHome: false,
             abaServicos: false
-        },
-         form: [
-            {
-                inputNome: 'Nome'
-            },
-            {
-                inputNome: 'E-mail'
-            },
-            {
-                inputNome: 'Assunto'
-            }
-        ]
-
-              }
+        }
+    }
   },
   created () {
     window.addEventListener('scroll', this.handleScroll);
@@ -108,12 +63,6 @@ export default {
         } else {
             this.abas.abaServicos = false;
         }
-    },
-    scrollHome () {
-    window.scrollTo(0,0);
-    },
-    scrollServicos () {
-    window.scrollTo(0,650);
     }
   }
 }

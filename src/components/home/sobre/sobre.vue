@@ -3,6 +3,7 @@
         <v-parallax src='@/../static/notebook-background.jpg'>
             <v-row
             justify="center" class="mt-12">
+            <a name="sobrenos" class="text-decoration-none" />
                 <h1>{{titulo}}</h1>
             </v-row>
             <v-row
