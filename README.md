@@ -20,3 +20,8 @@ Projeto em desenvolvimento de reestruturação do site do Katalid em Vuejs + Wor
 
 
 ***Obs.:*** Caso apresente erro no ``` npm run serve``` , delete a pasta ```node_modules``` e execute o comando ``` npm install``` novamente.
+
+# Frameworks de Vue Utilizados
+
+- Vuetify
+- Vuex
